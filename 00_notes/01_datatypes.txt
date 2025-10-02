@@ -1,0 +1,25 @@
+==> datatypes in python:
+    1) objects
+    -> everything in python is an object
+    -> every object has a unique identity , a type and a value
+    -> id() function returns the identity of an object  
+    -> type() function returns the type of an object
+    -> value is the data stored in the object
+    -> mutable objects : objects whose value can be changed (like lists , dictionaries)
+    -> immutable objects : objects whose value cannot be changed (like strings , tuples)
+    -> id helps to check if the object is mutable or immutable.
+    -> we can check it by using the value but it is not a good practice.
+
+    2) set data type:
+    -> unordered collection of unique elements
+
+    3) Number data type:
+    -> int : integer values (positive and negative whole numbers)
+    -> float : decimal values (positive and negative numbers with decimal points)
+    -> complex : complex numbers (numbers with a real and imaginary part)
+    -> bool : boolean values (True or False)
+    -> NoneType : represents the absence of a value (None)
+    -> we can use type() function to check the type of a variable.
+
+    4) string data type:
+    
