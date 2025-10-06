@@ -22,3 +22,6 @@ print(f" encoded text : {encoded_text}") # Chai Sp\xc3\xa8cial
 
 decoded_text = encoded_text.decode("utf-8")
 print(f" decoded text : {decoded_text}") # Chai Spècial
+
+name = "Taksh"
+print(name[::-1]) # for reversing the string : hskaT
