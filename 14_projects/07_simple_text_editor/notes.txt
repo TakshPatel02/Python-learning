@@ -1,0 +1,2 @@
+This is simple text editor notes.
+You can write anything here.
