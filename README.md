@@ -18,6 +18,8 @@ A personal repository to learn Python from basics to advanced topics, plus small
 - 12_asyncIO — asyncio basics, tasks, thread/process interop, race/deadlocks
 - 13_pydantic — BaseModel, validation, nested models, serialization
 - 14_projects — Small, self-contained practice projects
+- 15_foundation_of_GenAI — Foundations of Generative AI: tokenization, Google GenAI, prompting, examples (see requirements.txt)
+- JARVIS — AI/voice assistant prototype (see `JARVIS/main.py`, `voice/`, `ai/`, `system/`)
 
 ## 🗂 Project Descriptions (14_projects)
 
@@ -30,6 +32,7 @@ A personal repository to learn Python from basics to advanced topics, plus small
 - 07_simple_text_editor — Minimal file-based editor
 - 08_password_checker — Password strength feedback
 - 09_ATM_simulation — ATM-like CLI operations
+- 10_whatsapp_message_sender — Schedule/send a WhatsApp Web message using pywhatkit
 
 ## 🚀 Run a Script (Windows cmd)
 
@@ -47,3 +50,44 @@ python 14_projects\03_rock_paper_scissor\main.py
 
 - Python version: any recent 3.x
 - Recommended VS Code extensions: Python (Microsoft), Pylance
+
+## JARVIS — AI Voice Assistant (overview)
+
+An always-on assistant that listens via microphone, understands your voice, and performs actions through intent handling. Entry point: `JARVIS/main.py`.
+
+### What it does
+
+- Greets you and listens continuously
+- Converts your speech to text (SpeechRecognition + PyAudio)
+- Routes the text to an intent handler (`ai/intent_handler.py`)
+- Speaks responses back to you (pyttsx3)
+- Stops when you say "exit" or "stop"
+
+### Folder structure
+
+- `JARVIS/main.py` — main loop: listen → handle intent → speak
+- `JARVIS/voice/` — speech I/O (e.g., `listen.py`, `speak.py`)
+- `JARVIS/ai/` — intent processing (e.g., `intent_handler.py`)
+- `JARVIS/system/` — system-level helpers (window control, etc.)
+
+### Dependencies
+
+Declared in `JARVIS/requirements.txt`:
+
+- speechrecognition, pyttsx3, pyaudio
+- pygetwindow, pyautogui
+- openai
+- pywin32 (Windows)
+
+### How to run (Windows cmd)
+
+```cmd
+pip install -r JARVIS\requirements.txt
+python JARVIS\main.py
+```
+
+Tips:
+
+- Ensure your microphone is available and selected as default input
+- First run may prompt permissions for microphone access
+- Say "exit" or "stop" to quit

@@ -1,0 +1,14 @@
+# Voice Recognition & Text-to-Speech
+speechrecognition
+pyttsx3
+pyaudio
+
+# Window Management & Automation
+pygetwindow
+pyautogui
+
+# AI/LLM Integration
+openai
+
+# Additional dependencies for speech recognition (Windows)
+pywin32; platform_system == "Windows"

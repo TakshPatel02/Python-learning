@@ -1,0 +1,37 @@
+What is LLM ? 
+LLM stands for Large Language Model. It is a type of artificial intelligence model that is designed to understand and generate human-like text based on the data it has been trained on. LLMs are typically built using deep learning techniques and are capable of performing a wide range of natural language processing tasks, such as text generation, translation, summarization, and question answering. Examples of LLMs include OpenAI's GPT series and Google's BERT.
+
+What is GPT ? 
+GPT stands for Generative Pre-trained Transformer. It is a specific type of Large Language Model developed by OpenAI. GPT models are based on the Transformer architecture, which allows them to effectively process and generate human-like text. The "Generative" aspect refers to the model's ability to create new text based on the input it receives, while "Pre-trained" indicates that the model is initially trained on a large corpus of text data before being fine-tuned for specific tasks. GPT models have been widely used for various applications, including chatbots, content creation, and language translation.
+
+What is Transformer architecture?
+The Transformer architecture is a type of deep learning model introduced in the paper "Attention is All You Need" by Vaswani et al. in 2017. It is designed to handle sequential data, such as natural language, and has become the foundation for many state-of-the-art models in natural language processing, including GPT and BERT.
+
+How GPT works?
+GPT works by utilizing the Transformer architecture, which relies heavily on a mechanism called self-attention . This mechanism allows the model to weigh the importance of different words in a sentence relative to each other, enabling it to capture context and relationships within the text.
+
+How it predicts the next word?
+GPT predicts the next word in a sequence by analyzing the input text and using the patterns it has learned during training. It processes the input through multiple layers of the Transformer architecture, applying self-attention to understand the context of the words. Based on this understanding, it generates a probability distribution over the vocubulary and selects the most likely next word. The process is repeated iteratively to generate longer sequence of text.
+
+--> LLM models require large amount of data and computational power to train efficiently. It is an  CPU intensive task and requires specialized hardware like GPUs or NPUs to speed up the training process. 
+
+--> Transformer is designed as to guess the next word in sentence. It is trained on Large corpus of text data to learn the patterns and relationships between words.
+
+What is tokenization?
+Tokenization is the process of breaking down text into smaller units called tokens. These tokens can be words, subwords, or characters, depending on the tokenization method used. In the context of natural language processing and LLMs like GPT, tokenization is a crucial step because it allows the model to process and understand the text more efficiently. The characters human used to communicate are converted into tokens that the model can work with. 
+
+--> all the words in a sentence mapped to unique number called token ids. And for all the LLMs these token ids are stored in vocubulary file. For every LLM model there is a specific vocubulary file.
+
+--> after generating the text from the model it is detokenized back to human readable format.
+
+What is vector embedding?
+Vector embedding is a technique used to represent words, phrases, or entire documents as continuous vectors in a high-dimensional space. In natural language processing, embeddings capture the semantic meaning of words by placing similar words closer together in this vector space. This allows models like LLMs to understand relationships between words based on their context and usage.
+
+--> Vector embedding stores the semantic meaning of words in numerical format that the model can understand and process. In 3 dimensional space similar words will be closer to each other. 
+
+What is position encoding?
+Position encoding is a technique used in Transformer architectures to provide information about the order of words in a sequence. Since Transformers do not have a built-in notion of word order (unlike recurrent neural networks), position encoding is added to the input embeddings to help the model understand the relative positions of words. This is typically done by adding sinusoidal functions or learned embeddings that represent the position of each token in the sequence. Position encoding enables the model to capture the sequential nature of language, which is essential for understanding context and meaning.
+
+What is multi-head attention?
+Multi-head attention is a mechanism used in Transformer architectures that allows the model to focus on different parts of the input sequence simultaneously. Instead of computing a single attention score for each word, multi-head attention splits the input into multiple "heads," each of which learns to attend to different aspects of the input. This enables the model to capture a richer set of relationships and dependencies between words in the sequence. Each head performs its own self-attention operation, and the results are then concatenated and linearly transformed to produce the final output. Multi-head attention enhances the model's ability to understand complex language patterns and improves its overall performance on various natural language processing tasks.
+
